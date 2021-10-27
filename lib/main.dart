@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String text7 = "";
   String text8 = "";
   String text9 = "";
-  String imagePath = 'assets/test.gif';
+  String imagePath = 'assets/berries.jpg';
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +108,11 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
+        child:
+        SingleChildScrollView(
+
+        child:
+        Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
@@ -126,72 +130,41 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset('test.gif'),
-            /*Wrap(
-              children: [
-                ...colorList2.map(
+
+        Wrap(
+          direction: Axis.horizontal,
+          children: [
+            ...[
+              color0,
+              color1,
+              color2,
+              color3,
+              color4,
+              color5,
+              color6,
+              color7,
+              color8,
+              color9,
+            ].map(
                   (color) => Container(
-                    height: MediaQuery.of(context).size.width / 5,
-                    width: MediaQuery.of(context).size.width / 5,
-                    color: color,
-                  ),
+                height: MediaQuery.of(context).size.width / 2,
+                width: MediaQuery.of(context).size.width / 2,
+                color: color,
+                alignment: Alignment.center,
+                child: Text(
+                  color.toString(),
+                  style: TextStyle(fontSize: 20),
                 ),
-              ],
-            ),*/
-            Container(
-              height: 30,
-              color: color0,
-              child: Text(text0),
+              ),
             ),
-            Container(
-              height: 30,
-              color: color1,
-              child: Text(text1),
-            ),
-            Container(
-              height: 30,
-              color: color2,
-              child: Text(text2),
-            ),
-            Container(
-              height: 30,
-              color: color3,
-              child: Text(text3),
-            ),
-            Container(
-              height: 30,
-              color: color4,
-              child: Text(text4),
-            ),
-            Container(
-              height: 30,
-              color: color5,
-              child: Text(text5),
-            ),
-            Container(
-              height: 30,
-              color: color6,
-              child: Text(text6),
-            ),
-            Container(
-              height: 30,
-              color: color7,
-              child: Text(text7),
-            ),
-            Container(
-              height: 30,
-              color: color8,
-              child: Text(text8),
-            ),
-            Container(
-              height: 30,
-              color: color9,
-              child: Text(text9),
-            )
           ],
         ),
+
+          ],
+        )),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: getPalette2,
+        onPressed: getPalette1,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
