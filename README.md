@@ -1,9 +1,9 @@
-# flutter_palette_extractor
+# Flutter Palette Extraction
 
-A flutter project to demo palette extraction algorithms (Histogram + Median Cut)
+A collection of algorithms to extract a palette from an image:
+ 
+ - Histogram
+ - Median-Cut
+ - K-Means
 
-## Getting Started
-
-- clone this repository
-- get dependencies (pub get)
-- launch the application
+![Palette extracted with Histogram algorithm](https://i.ibb.co/f9dGtYk/histogram.png)
